@@ -1,2 +1,2 @@
-selenium==4.25.0  # نسخه جدیدتر که Selenium Manager رو به‌خوبی پشتیبانی می‌کنه
+selenium==4.25.0
 requests==2.31.0
