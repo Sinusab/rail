@@ -10,7 +10,7 @@ import json
 
 # Telegram Bot settings
 TELEGRAM_TOKEN = "7993551757:AAHmBKc23T8wlgCEYhmNwwLrG2qARH9N6gw"  # Replace with your bot token
-TELEGRAM_CHAT_ID = "195375276" 
+TELEGRAM_CHAT_ID = "195375276"
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
@@ -22,12 +22,12 @@ service = Service()  # Selenium Manager will handle Chromedriver
 options = webdriver.ChromeOptions()
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36")
 options.add_argument("--disable-blink-features=AutomationControlled")
-options.add_argument("--headless")
+options.add_argument("--headless=new")  # Use new headless mode
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
-options.add_argument("--disable-gpu")  # Fix for headless environments
-options.add_argument("--window-size=1920,1080")  # Set window size
-options.add_argument("--disable-extensions")  # Disable extensions
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1920,1080")
+options.add_argument("--disable-extensions")
 driver = webdriver.Chrome(service=service, options=options)
 
 # Load cookies and apply them
