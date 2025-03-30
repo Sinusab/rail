@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ['python312', 'google-chrome']  # فقط Chrome رو نگه می‌داریم
+nixPkgs = ['python312', 'google-chrome', 'libglib', 'libnss3', 'libatk1_0', 'libcups2', 'libdrm2', 'libxkbcommon', 'libxcomposite1', 'libxdamage1', 'libxrandr2', 'libgbm1', 'libpango-1_0', 'libcairo2', 'libasound2']
 
 [phases.build]
 cmds = ['pip install -r requirements.txt']
