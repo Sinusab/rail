@@ -2,19 +2,22 @@
 nixPkgs = [
   'python312',
   'google-chrome',
-  'glib',              # معادل libglib
-  'nss',               # معادل libnss3
-  'atk',               # معادل libatk1_0
-  'cups',              # معادل libcups2
-  'libdrm',            # معادل libdrm2
-  'mesa',              # معادل libgbm1
-  'pango',             # معادل libpango-1_0
-  'cairo',             # معادل libcairo2
-  'xorg.libXcomposite', # معادل libXcomposite
-  'xorg.libXdamage',    # معادل libXdamage
-  'xorg.libXrandr',     # معادل libXrandr
-  'libxkbcommon',       # معادل libxkbcommon
-  'alsa-lib'           # معادل libasound2
+  'glib',
+  'nss',
+  'atk',
+  'cups',
+  'libdrm',
+  'mesa',
+  'pango',
+  'cairo',
+  'xorg.libXcomposite',
+  'xorg.libXdamage',
+  'xorg.libXrandr',
+  'libxkbcommon',
+  'alsa-lib',
+  'fontconfig',      # برای فونت‌ها
+  'expat',           # برای XML parsing
+  'xorg.libX11'      # پایه X11
 ]
 
 [phases.build]
