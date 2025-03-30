@@ -1,2 +1,2 @@
-selenium==4.18.1
+selenium==4.25.0  # نسخه جدیدتر که Selenium Manager رو به‌خوبی پشتیبانی می‌کنه
 requests==2.31.0
