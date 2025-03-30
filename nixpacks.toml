@@ -1,5 +1,21 @@
 [phases.setup]
-nixPkgs = ['python312', 'google-chrome', 'libglib', 'libnss3', 'libatk1_0', 'libcups2', 'libdrm2', 'libxkbcommon', 'libxcomposite1', 'libxdamage1', 'libxrandr2', 'libgbm1', 'libpango-1_0', 'libcairo2', 'libasound2']
+nixPkgs = [
+  'python312',
+  'google-chrome',
+  'glib',           # معادل libglib
+  'nss',            # معادل libnss3
+  'atk',            # معادل libatk1_0
+  'cups',           # معادل libcups2
+  'libdrm',         # معادل libdrm2
+  'mesa',           # معادل libgbm1 (GBM از Mesa میاد)
+  'pango',          # معادل libpango-1_0
+  'cairo',          # معادل libcairo2
+  'libXcomposite',  # معادل libxcomposite1
+  'libXdamage',     # معادل libxdamage1
+  'libxkbcommon',   # معادل libxkbcommon
+  'libXrandr',      # معادل libxrandr2
+  'alsa-lib'        # معادل libasound2
+]
 
 [phases.build]
 cmds = ['pip install -r requirements.txt']
