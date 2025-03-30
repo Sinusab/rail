@@ -10,15 +10,15 @@ import json
 
 # Telegram Bot settings
 TELEGRAM_TOKEN = "7993551757:AAHmBKc23T8wlgCEYhmNwwLrG2qARH9N6gw"  # Replace with your bot token
-TELEGRAM_CHAT_ID = "195375276"           # Replace with your chat ID
+TELEGRAM_CHAT_ID = "195375276" 
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     payload = {"chat_id": TELEGRAM_CHAT_ID, "text": message}
     requests.post(url, json=payload)
 
-# Setup ChromeDriver with headless mode
-service = Service(executable_path="/usr/local/bin/chromedriver")  # Path on Railway
+# Setup ChromeDriver with headless mode (no need to specify path)
+service = Service()  # Selenium Manager will find Chromedriver
 options = webdriver.ChromeOptions()
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36")
 options.add_argument("--disable-blink-features=AutomationControlled")
